@@ -1,0 +1,43 @@
+.input-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px
+}
+
+.table {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    align-items: center;
+    margin-top: 10px;
+    text-align: center;
+    border: 1px gray solid;
+}
+
+.table.colored {
+    background-color: rgb(240, 240, 240);
+}
+
+.table.colored-a {
+    background-color: rgb(174, 132, 132);
+    color: white;
+}
+
+.table.colored-b {
+    background-color: rgb(67, 67, 56);
+    color: white;
+}
+
+.table > div {
+    border-right: 1px gray solid;
+    border-left: 1px gray solid;
+    height: 50px;
+    line-height: 50px;
+}
+
+.table > div > .flag {
+    width: 80px;
+    height: 50px;
+    display: block;
+    margin: 0 auto;
+}

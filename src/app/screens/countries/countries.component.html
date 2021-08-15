@@ -1,0 +1,25 @@
+<div>
+    <div class="input-container">
+        <div style="margin-right: 5px;">Search:</div>
+        <input [(ngModel)]="searchValue" (ngModelChange)="onSearchChange($event)" placeholder="Country name.." />
+    </div> 
+    <div class="table colored">
+        <div>Name</div>
+        <div>Native Name</div>
+        <div>Capital</div>
+        <div>Population</div>
+        <div>Flag</div>
+    </div>
+    <div class="table" *ngFor="let country of filteredCountries; let i = index" [ngClass]="{'colored-a': i % 2 === 0, 'colored-b': i % 2 === 1}">
+        <div>{{country?.name}}</div>
+        <div>{{country?.nativeName}}</div>
+        <div>{{country?.capital}}</div>
+        <div>{{country?.population}}</div>
+        <div>
+            <img [src]="country?.flag" class="flag" />
+        </div>
+    </div>
+    <div>
+
+    </div>
+</div>
